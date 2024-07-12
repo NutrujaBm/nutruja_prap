@@ -14,10 +14,11 @@
 }
 
 :root {
-    --bg-color: #000000;
+    --bg-color: #ffffff;
+    --bg1-color: #f8fdda;
     --second_bg-color: #01fe87;
-    --text-color: #f7f7f7;
-    --main-color: #f7f7f7; 
+    --text-color: #000000;
+    --main-color: #fcfcfc; 
 }
 
 html {
@@ -27,9 +28,9 @@ html {
 
 body {
     font-family:"Poppins", sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    /* background: radial-gradient(ellipse at bottom,#A364AF 0%,#EFDCDD 100%); */
+    /* background: var(--bg-color);
+    color: var(--text-color); */
+    background: linear-gradient(315deg, #8f3636, #d7e1ec);
 }
 
 html::-webkit-scrollbar {
@@ -57,7 +58,7 @@ html::-webkit-scrollbar-thumb {
     justify-content: space-between;
     padding: 3rem 9%;
     height: 6.5rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 67, 67, 0.7);
     backdrop-filter: blur(20px);
 }
 
@@ -374,12 +375,14 @@ section {
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: var(--bg-color);
+    background-color: var(--bg1-color);
 }
 
 .about_img img {
     position: relative;
-    width: 32vw;
+    top: 3rem;
+    width: 30vw;
+    margin: 0 auto 20px auto;
     border-radius: 50%;
     box-shadow: 0 0 2px var(--main-color),
                 0 0 10px var(--main-color),
@@ -393,21 +396,14 @@ section {
     transform: scale(1.01);
 }
 
-.about_content h1.heading {
+.about_content h2.heading {
         font-size: 6rem;
         font-weight: 700;
         line-height: 1.3;
 }
 
-.about_content h1.heading span {
+.about_content h2.heading span {
     color: var(--second_bg-color);
-}
-
-.about_content h2 {
-    font-size: 3rem;
-    margin-top: 3rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
 }
 
 .about_content p {
@@ -416,7 +412,80 @@ section {
     margin-top: 2rem;
 }
 
-.about_btn {
+.row {
     display: flex;
-    padding-top: 2rem;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    margin-right: -80px;
+    position: relative;
+}
+
+.about .about_content .personal_info {
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top : 10px;
+}
+
+.about .about_content .personal_info .info_item {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.about .about_content .personal_info .info_item p {
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-color-900);
+    border-bottom: 1px solid var(--second_bg-color-50);
+}
+.about .about_content .personal_info .info_item p span {
+    font-weight: 400;
+    color: var(--text-color-700);
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.tab_titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab_links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab_links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--second_bg-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab_links.active_link::after {
+    width: 50%;
+}
+
+.tab_content span{
+    color: var(--second_bg-color);
+    font-size: 16px;
+}
+
+.tab_description span:last-child {
+    display: block;
+}
+
+.tab_content {
+    display: none;
+}
+
+.tab_content.active_tab {
+    display: block;
 }

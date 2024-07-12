@@ -5,3 +5,10 @@ function toggleMenu() {
     icon.classList.toggle("open")
 }
 
+function showInfo(section) {
+    const sections = document.querySelectorAll('.info-content');
+    sections.forEach(sec => sec.style.display = 'none');
+    
+    document.getElementById(section).style.display = 'block';
+}
+

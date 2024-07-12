@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+
+<!-- HEADER -->
     <header class="header">
         <a href="#" class="logo">Nutruja <span>Prapon</span></a>
         <i class="fa-solid fa-bars" id="menu_icon"></i>
@@ -17,7 +19,6 @@
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -25,6 +26,7 @@
         </nav>
     </header>
 
+<!-- HOME -->
     <section class="home" id="home">
         <div class="home_img">
             <img src="/public/assets/images/proflie1.jpg" alt="">
@@ -47,28 +49,153 @@
         </div>
     </section>
 
+<!-- ABOUT ME -->
     <section class="about" id="about">
         <div class="about_img">
-            <img src="/public/assets/images/30118_01.jpg" alt="">
+            <img src="/public/assets/images/30122(1).jpg" alt="">
         </div>
         <div class="about_content">
-            <h1 class="heading"><span>About</span> Me</h1>
-            <h2>Name : Nutruja Prapon</h2>
-            <h2>Position: Web Developer</h2>
-            <p>
+            <h2 class="heading"><span>About</span> Me</h2>
+            <p class="about_description">
                 I have experience developing web applications, both frontend and backend, using technologies such as HTML, CSS, and JavaScript.
             </p>
-            <h2>Education : Bangkok University</h2>
-            <p>
-                Faculty of Computer Science, Department of Computer Science
 
-            </p>
-            <div class="about_btn">
-                <a href="#" class="btn">Content Me!</a>
+            <div class="row">
+                <div class="personal_info">
+                    <div class="row">
+                        <div class="info_item">
+                            <p>
+                                <i class="info-icon fas fa-user"></i>
+                                <span>Nutruja Prapon</span>
+                            </p>
+                        </div>
+                        <div class="info_item">
+                            <p>
+                                <i class="info-icon fas fa-calendar-alt"></i>
+                                <span>Born on 16 Apr, 2003</span>
+                            </p>
+                        </div>
+                        <div class="info_item">
+                            <p>
+                                <i class="info-icon fas fa-envelope"></i>
+                                <span>nutruja.bm@gamail.com</span>
+                            </p>
+                        </div>
+                        <div class="info_item">
+                            <p>
+                                <i class="info-icon fas fa-phone"></i>
+                                <span>092-275-7228</span>
+                            </p>
+                        </div>
+                        <!-- <div class="info_item">
+                            <p>
+                                <i class="info-icon fas fa-home"></i>
+                                <span>Soi Phahon Yothin 47, Lad Yao, Chatuchak, Bangkok</span>
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab_titles">
+                <span class="tab_links active_link" onclick="opentab('education')">Education</span>
+                <span class="tab_links" onclick="opentab('language')">Language Skills</span>
+            </div>
+            <div class="tab_content active_tab" id="education">
+                <p class="tab_description">
+                    <span>2021 - Current </span>
+                    <br>Computer Science - Bangkok University
+                </p>
+            </div>
+            <div class="tab_content" id="language">
+                <p class="tab_description">
+                    <span>Thai</span> - Native
+                    <br>
+                    <span>English</span>  - Beginner
+                    <br>
+                    <span>Japanese</span>  - Beginner
+                    <span></span>
+                </p>
             </div>
         </div>
+    </section>
 
+ <!-- SKILLS -->   
+    <section class="skills" id="skills">
+        <h1 class="title_skills">Skills</h1>
+        <p class="section_text_p1">My technical level</p>
+        <div class="skills_details_container">
+            <div class="about_container">
+                <div class="details_container">
+                    <h2 class="skills_sub_title">
+                        Frontend Development
+                    </h2>
+                    <div class="article_container">
+                        <article>
+                            <i class="fa-brands fa-html5"></i>
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-brands fa-css3"></i>
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-brands fa-js"></i>
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details_container">
+                    <h2 class="skills_sub_title">
+                        Backend Development
+                    </h2>
+                    <div class="article_container">
+                        <article>
+                            <i class="fa-brands fa-python"></i>
+                            <div>
+                                <h3>Python</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+    <section class="projects" id="projects">
+        <h1 class="heading"><span>About</span> Me</h1>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>About</span> Me</h1>
     </section>
     <script src="public/scripts/main.js"></script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab_links");
+        var tabcontents = document.getElementsByClassName("tab_content");
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active_link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active_tab");
+            }
+            event.currentTarget.classList.add("active_link");
+            document.getElementById(tabname).classList.add("active_tab");
+        }
+
+    </script>
 </body>
 </html>
