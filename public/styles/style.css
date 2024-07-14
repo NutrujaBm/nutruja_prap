@@ -489,6 +489,15 @@ section {
 
 }
 
+.skills-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.frontend, .backend {
+    flex: 1;
+}
+
 .tab-links {
     margin-right: 50px;
     font-size: 18px;
@@ -518,10 +527,14 @@ section {
 .tab-content span{
     color: var(--primary-color);
     font-size: 16px;
+    font-weight: 500;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
 }
 
 .tab-description span:last-child {
     display: block;
+    
 }
 
 .tab-content {
@@ -552,8 +565,10 @@ section {
 
 .icon {
     cursor: pointer;
-    height: 2rem;
-    font-size: 3rem;
+    margin-top: 1.5rem;
+    height: 3rem;
+    font-size: 2.5rem;
+    color: #000000;
 }
 
 .about-containers {
