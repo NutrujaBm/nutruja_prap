@@ -18,9 +18,8 @@
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <!-- <li><a href="#contact">Contact</a></li> -->
             </ul>
         </nav>
     </header>
@@ -37,8 +36,13 @@
                 Whether it's front-end elegance or back-end robustness, I strive to deliver projects that are both visually appealing and highly functional.
             </p>
             <div class="socials-icon">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <!-- <a href="#"><i class="fa-brands fa-linkedin"></i></a> -->
+                <a href="https://github.com/NutrujaBm" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/nutruja.prapon/" target="_blank">
+                    <i class="fa-brands fa-facebook contact-card-icon"></i>
+                </a>
             </div>
 
             <div class="home-btn">
@@ -46,9 +50,6 @@
                 <a href="#" class="btn">Download Resume</a>
             </div>
         </div>   
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- ABOUT ME -->
@@ -80,7 +81,7 @@
                         <div class="info-item">
                             <p>
                                 <i class="info-icon fas fa-envelope"></i>
-                                <span>nutruja.bm@gamail.com</span>
+                                <span>nutruja.prap@gamail.com</span>
                             </p>
                         </div>
                         <div class="info-item">
@@ -110,21 +111,23 @@
                         <div class="frontend">
                             <p class="tab-description">
                                 <span>Frontend Development</span>
-                                <br><img src="./public/assets/icons/icons8-html.png" alt=""> HTML - Experienced
-                                <br><i class="fa-brands fa-css3 icon"></i> CSS - Experienced
-                                <br><i class="fa-brands fa-js icon"></i> JavaScript - Intermediate
-                                <br>
-                                <br>
-                                <span>Others</span>
-                                <br><i class="fa-brands fa-figma icon"></i> Figma - Experienced
-                                <br><i class="fa-brands fa-figma icon"></i> Vs Code
-                                <br><i class="fa-brands fa-figma icon"></i> GitHub
+                                <br><img src="./public/assets/icons/icons8-html.png" alt="" class="icon"> HTML - Experienced
+                                <br><img src="./public/assets/icons/icons8-css.png" alt="" class="icon"> CSS - Experienced
+                                <br><img src="./public/assets/icons/icons8-js.png" alt="" class="icon"> JavaScript - Intermediate
                             </p>
                         </div>
                         <div class="backend">
                             <p class="tab-description">
                                 <span>Backend Development</span>
-                                <br><i class="fa-brands fa-python icon"></i> Python - Experienced
+                                <br><img src="./public/assets/icons/icons8-python.png" alt="" class="icon"> Python - Experienced
+                            </p>
+                        </div>
+                        <div class="other">
+                            <p class="tab-description">
+                                <span>Others</span>
+                                <br><img src="./public/assets/icons/icons8-figma.png" alt="" class="icon"> Figma - Experienced
+                                <br><img src="./public/assets/icons/icons8-vs-code.png" alt="" class="icon"> Vs Code
+                                <br><img src="./public/assets/icons/icons8-github.png" alt="" class="icon"> GitHub
                             </p>
                         </div>
                     </div>
@@ -141,68 +144,154 @@
                         <br>
                         <span>English</span>  - Beginner
                         <br>
-                        <!-- <span>Japanese</span>  - Beginner
-                        <span></span> -->
+                        <span>Japanese</span>  - Beginner
+                        <br>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS -->   
-    <section class="skills" id="skills">
-        <h1 class="title">Skills</h1>
-        <p class="section-text-p1">My technical level</p>
-        <div class="skills-details-container">
-            <div class="about-containers">
-                <div class="details-containers">
-                    <h2 class="skills-sub_title">
-                        Frontend Development
-                    </h2>
-                    <div class="article-container">
-                        <article>
-                            <i class="fa-brands fa-html5 icon"></i>
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="fa-brands fa-css3 icon"></i>
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="fa-brands fa-js icon"></i>
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-containers">
-                    <h2 class="skills-sub-title">
-                        Backend Development
-                    </h2>
-                    <div class="article-container">
-                        <article>
-                            <i class="fa-brands fa-python icon"></i>
-                            <div>
-                                <h3>Python</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
+    <!-- PROJECT -->
+    <section class="projects" id="projects">
+        <h2 data-heading = "My Portfolio" class="section-title">Recent Works</h2>
+        <div class="work-filters">
+            <span class="work-item active-work" data-filter="all">All</span>
+            <span class="work-item" data-filter=".web">Web</span>
+            <span class="work-item" data-filter=".program">Program</span>
+            <span class="work-item" data-filter=".design">Design</span>
+        </div>
 
+        <div class="work-container container grid">
+            <div class="work-card mix program">
+                <img src="./public/assets/images/riski-project.png" alt="" class="work-img">
+                <h3 class="work-title">Riskiapartment</h3>
+                <span class="work-button">Demo
+                    <i class="fa-solid fa-arrow-right work-button-icon"></i>
+                </span>
+                <div class="portfolio-item-details">
+                    <h3 class="details-title"></h3>
+                    <p class="details-description">
+                        Apartment management system design About adding, deleting, and editing room and user information
+                    </p>
+                    <ul class="details-info">
+                        <li>Created - <span>21 Apr 2023</span></li>
+                        <li>Created - <span>python</span></li>
+                        <li>Role - <span>FrontEnd</span></li>
+                        <li>View - <span><a href="https://github.com/NutrujaBm/Project-Riskiapartment" target="_blank">https://github.com/Project-Riskiapartment</a></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="work-card mix design">
+                <img src="./public/assets/images/Aiboo-desiner.png" alt="" class="work-img">
+                <h3 class="work-title">AiBoo Hardware</h3>
+                <span class="work-button">Demo
+                    <i class="fa-solid fa-arrow-right work-button-icon"></i>
+                </span>
+                <div class="portfolio-item-details">
+                    <h3 class="details-title"></h3>
+                    <p class="details-description">
+                        Technology store design which can be displayed on the website
+                    </p>
+                    <ul class="details-info">
+                        <li>Created - <span></span></li>
+                        <li>Created - <span>html</span></li>
+                        <li>Role - <span>FrontEnd</span></li>
+                        <li>View - <span><a href="https://aiboohardware.w3spaces.com/?classId=fbcdda67-4b9d-4c12-af0f-6bea264c5154&assignmentId=40eba9f1-189c-49d9-b6ca-c27dc525a878&submissionId=ae0fb7b2-0570-79fc-3a99-61c51a767209#notebook">https://aiboohardware.w3spaces.com/</a></span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PORTFOLIO POPUP-->
+     <div class="portfolio-popup">
+        <div class="portfolio-popup-inner">
+            <div class="portfolio-popup-content grid">
+                <span class="portfolio-popup-close"><i class="fa-solid fa-xmark"></i></span>
+                <div class="pp-thumbnail">
+                    <img src="./public/assets/images/riski-project.png" alt="" class="portfolio-popup-img">
+                </div>
+                <div class="portfolio-popup-info">
+                    <div class="portfolio-popup-subtitle">Featured - <span>Design</span></div>
+                    <div class="portfolio-popup-body">
+                        <h3 class="details-title">App for technology & services</h3>
+                        <p class="details-description">
+                        Apartment management system design About adding, deleting, and editing room and user information
+                        </p>
+                        <ul class="details-info">
+                            <li>Created - <span>21 Apr 2023</span></li>
+                            <li>Created - <span>python</span></li>
+                            <li>Role - <span>Data</span></li>
+                            <li>View - <span><a href="#">https://aiboohardware.w3spaces.com/?classId=fbcdda67-4b9d-4c12-af0f-6bea264c5154&assignmentId=40eba9f1-189c-49d9-b6ca-c27dc525a878&submissionId=ae0fb7b2-0570-79fc-3a99-61c51a767209#notebook</a></span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+     </div>
+
+    <!-- CONTENT -->
+    <!-- <section class="contact" id="contact">
+        <h2 data-heading = "Get in touch" class="section-title">Contact Me</h2>
+
+        <div class="contact-container container grid">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <a href="https://www.facebook.com/nutruja.prapon/" target="_blank">
+                            <i class="fa-brands fa-facebook contact-card-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="contact-content">
+                <form action="" class="contact-form">
+                    <div class="input-container">
+                        <input type="text" class="input">
+                        <label for="">Username</label>
+                        <span>Username</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" class="input">
+                        <label for="">Email</label>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="tel" class="input">
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                    </div>
+                    <div class="input-container textarea">
+                        <textarea name="" id="" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                    </div>
+                    <button type="submit" class="button"><i class="fa-solid fa-paper-plane button-icon"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div> -->
+        </div>
     </section>
 
+    <!-- FOOTER -->
+     <footer class="footer">
+        <div class="footer-bg">
+
+        </div>
+     </footer>
+
+    <!-- MIXITUP FILTER -->
+    <script src="public/scripts/mixitup.min.js"></script>
+
+    <!-- MAIN JS -->
     <script src="public/scripts/main.js"></script>
+
+    <!-- TAB-LINKS -->
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-content");
