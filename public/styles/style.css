@@ -30,7 +30,6 @@ html {
 }
 
 /* HEADER */
-
 .Navbar {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
@@ -63,9 +62,9 @@ h3 {
 
 nav ul {
   list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 nav ul li {
@@ -74,7 +73,6 @@ nav ul li {
 
 nav ul li a {
   font-size: 1.1rem;
-  text-decoration: none;
   color: #2b3467;
   font-weight: 500;
   transition: color 0.3s;
@@ -84,13 +82,7 @@ nav ul li a:hover {
   color: #eb455f;
 }
 
-section .home-page {
-  min-height: 100vh;
-  padding: 2rem 9% 5rem;
-}
-
 /* HOME */
-
 .home-page {
   display: flex;
   flex-direction: column;
@@ -102,18 +94,9 @@ section .home-page {
   overflow: hidden;
   width: 100%;
   height: 100vh;
-}
-
-.animated-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: linear-gradient(45deg, #b1abff, #7d7bf7, #b25ff5, #a787ff);
   background-size: 400% 400%;
   animation: meshGradient 15s ease infinite;
-  z-index: -2; /* Adjusted to ensure it's behind the content */
 }
 
 @keyframes meshGradient {
@@ -133,7 +116,7 @@ section .home-page {
   font-weight: bold;
   color: rgba(255, 255, 255, 0.2);
   position: absolute;
-  top: 460px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -148,7 +131,6 @@ section .home-page {
 .industrial-design {
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
-  margin-bottom: 0;
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   font-weight: 600;
@@ -157,13 +139,12 @@ section .home-page {
 .portfolio-title {
   font-size: 5rem;
   letter-spacing: 0.3rem;
-  margin: 0.5rem 0;
-  position: relative;
-  display: inline-block;
-  padding: 0 8rem;
   color: #ffffff;
   font-weight: 700;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 0 8rem;
+  position: relative;
 }
 
 .portfolio-title::before,
@@ -189,7 +170,6 @@ section .home-page {
 
 .author-name {
   font-size: 1.9rem;
-  margin: 0;
   letter-spacing: 0.1rem;
   opacity: 0.9;
   color: #ffffff;
@@ -251,23 +231,16 @@ section .home-page {
 }
 
 /* ABOUT ME */
-
-section .about-page {
-  min-height: 100vh;
-  padding: 2rem 9% 5rem;
-}
-
 .about-page {
   text-align: center;
   padding: 8rem 2rem;
-  background-color: #f9f9f9; /* Light background color */
+  background-color: #f9f9f9;
 }
 
-/* Header Styles */
 .about-page h2 {
   font-size: 3rem;
   line-height: 1.3;
-  color: #2b3467; /* Darker color for better contrast */
+  color: #2b3467;
 }
 
 .about-page h3 {
@@ -275,47 +248,42 @@ section .about-page {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.3;
-  color: #333; /* Darker color for better contrast */
+  color: #333;
 }
 
-/* Paragraph Styles */
 p {
   font-size: 1.1rem;
-  margin: 1.5rem 0 3rem; /* Adjusted margins */
-  color: #555; /* Slightly darker for readability */
+  margin: 1.5rem 0 3rem;
+  color: #555;
 }
 
-/* About Content Layout */
 .about-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  gap: 2rem; /* Added gap for spacing */
-  max-width: 1500px; /* Optional: Set a max-width for better alignment */
-  margin: 0 auto; /* Center the container horizontally */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .left-column {
-  flex: 2 1 800px; /* Larger flex-grow value for the left column */
-  max-width: 400px; /* Max width for large screens */
+  flex: 2 1 800px;
+  max-width: 400px;
   margin-top: 2rem;
 }
 
 .right-column {
-  flex: 1 1 100px; /* Smaller flex-grow value for the right column */
-  margin-right: 0;
+  flex: 1 1 100px;
 }
 
-/* Profile Image */
 .profile-image {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Personal Info Styles */
 .personal-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -350,7 +318,6 @@ p {
   color: #333;
 }
 
-/* Tabs and Tab Content */
 .tab-container {
   display: flex;
   flex-direction: column;
@@ -366,7 +333,7 @@ p {
 .tab-titles {
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px solid #333; /* Accent color underline */
+  border-bottom: 1px solid #333;
   margin-bottom: 1rem;
 }
 
@@ -382,7 +349,7 @@ p {
 
 .tab-links.active-link {
   font-weight: 600;
-  color: #2b3467; /* Dark color for active tab */
+  color: #2b3467;
 }
 
 .tab-content {
@@ -413,12 +380,12 @@ p {
 /* Skills Container */
 .skills-container {
   display: flex;
-  flex-wrap: wrap; /* Wrap for responsiveness */
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
 .skills-container div {
-  flex: 1 1 200px; /* Responsive sizing */
+  flex: 1 1 200px;
   max-width: 300px;
   padding: 1rem;
   background-color: #ffffff;
@@ -446,14 +413,14 @@ section .projects {
 .projects {
   text-align: center;
   padding: 8rem 2rem;
-  background-color: #f4f4f4; /* Light background color */
+  background-color: #f4f4f4;
 }
 
 /* Header Styles */
 .projects h2 {
   font-size: 3rem;
   line-height: 1.3;
-  color: #2b3467; /* Darker color for better contrast */
+  color: #2b3467;
 }
 
 .projects h3 {
@@ -461,14 +428,14 @@ section .projects {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.3;
-  color: #333; /* Darker color for better contrast */
+  color: #333;
 }
 
 /* Paragraph Styles */
 p {
   font-size: 1.1rem;
-  margin: 1.5rem 0 3rem; /* Adjusted margins */
-  color: #555; /* Slightly darker for readability */
+  margin: 1.5rem 0 3rem;
+  color: #555;
 }
 
 .projects-container {
@@ -539,7 +506,7 @@ p {
   color: #333;
   display: flex;
   align-items: center;
-  gap: 7px; /* Adds space between the text and the icon */
+  gap: 7px;
 }
 
 .project-links a:hover {
@@ -583,10 +550,10 @@ section.certificate {
   padding: 2rem 5%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  gap: 2rem; /* Increased gap for better spacing */
+  align-items: center;
+  gap: 2rem;
   width: 100%;
-  background-color: #f9f9f9; /* Light background color for contrast */
+  background-color: #f9f9f9;
   text-align: center;
   margin-top: 50px;
 }
@@ -598,11 +565,11 @@ section.certificate {
 /* CERTIFICATES CONTAINER */
 .certificates-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
-  gap: 1.5rem; /* Space between certificates */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
   padding: 1.5rem;
-  max-width: 1200px; /* Adjust max-width for better responsiveness */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: #fff;
 }
 
@@ -612,16 +579,16 @@ section.certificate {
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  border: 1px solid #ddd; /* Light border color for a cleaner look */
+  border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
   padding: 1rem;
 }
 
 .certificates-container img {
-  width: 100%; /* Adjust to fill the container */
-  height: auto; /* Maintain aspect ratio */
-  border: 1px solid #ddd; /* Separator between image and text */
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
 }
 
 .certificates-container .project-title {
@@ -648,28 +615,28 @@ section .contact {
 .contact {
   text-align: center;
   padding: 8rem 2rem;
-  background: #f4f4f4; /* Light background color */
+  background: #f4f4f4;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  text-align: center; /* Center text */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .contact-container {
-  max-width: 800px; /* Limit the width of the container for better readability */
+  max-width: 800px;
 }
 
 .contact-container h1 {
-  font-size: 2rem; /* Adjust size as needed */
-  margin-bottom: 1rem; /* Space below the heading */
-  color: #333; /* Dark color for text */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .contact-container p {
-  font-size: 1.1rem; /* Adjust size as needed */
-  color: #666; /* Lighter color for text */
-  margin-bottom: 2rem; /* Space below the paragraph */
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
 .socials-icon {
