@@ -133,7 +133,7 @@ section .home-page {
   font-weight: bold;
   color: rgba(255, 255, 255, 0.2);
   position: absolute;
-  top: 395px;
+  top: 460px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -260,7 +260,7 @@ section .about-page {
 .about-page {
   text-align: center;
   padding: 8rem 2rem;
-  background-color: #f4f4f4; /* Light background color */
+  background-color: #f9f9f9; /* Light background color */
 }
 
 /* Header Styles */
@@ -491,8 +491,22 @@ p {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
+.project-vertical {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 1200px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
 .project-description {
   max-width: 400px;
+  padding: 30px;
 }
 
 .project-description h2 {
@@ -507,9 +521,9 @@ p {
 }
 
 .tech-stack {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
 }
 
 .project-links {
@@ -521,7 +535,7 @@ p {
 .project-links a {
   text-decoration: none;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: #333;
   display: flex;
   align-items: center;
@@ -537,9 +551,19 @@ p {
   height: 30px;
 }
 
-.project-image img {
+.project-image-horizontal img {
   width: 600px;
-  border-radius: 12px;
+  border-radius: 5px;
+  border: 0.5px solid #616161;
+}
+
+.project-image-vertical img {
+  height: 550px;
+  width: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: top;
+  border: 0.5px solid #616161;
 }
 
 @media (max-width: 768px) {
@@ -551,6 +575,67 @@ p {
     width: 100%;
     margin-top: 20px;
   }
+}
+
+/* CERTIFICATE */
+section.certificate {
+  min-height: 100vh;
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  gap: 2rem; /* Increased gap for better spacing */
+  width: 100%;
+  background-color: #f9f9f9; /* Light background color for contrast */
+  text-align: center;
+  margin-top: 50px;
+}
+
+.certificate h3 {
+  margin-top: 50px;
+}
+
+/* CERTIFICATES CONTAINER */
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+  gap: 1.5rem; /* Space between certificates */
+  padding: 1.5rem;
+  max-width: 1200px; /* Adjust max-width for better responsiveness */
+  margin: 0 auto; /* Center the container horizontally */
+  background-color: #fff;
+}
+
+/* CERTIFICATE ITEM */
+.certificates-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd; /* Light border color for a cleaner look */
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.certificates-container img {
+  width: 100%; /* Adjust to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #ddd; /* Separator between image and text */
+}
+
+.certificates-container .project-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-weight: 700;
+  color: #4a48e0;
+}
+
+.certificates-container .date {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
 }
 
 /* CONTACT */
