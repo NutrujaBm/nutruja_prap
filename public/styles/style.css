@@ -82,6 +82,32 @@ nav ul li a:hover {
   color: #eb455f;
 }
 
+.hamburger {
+  display: none; /* Hide hamburger on larger screens */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Customize as needed */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show the menu when toggled */
+  }
+
+  .hamburger {
+    display: block; /* Show the hamburger on smaller screens */
+    cursor: pointer;
+  }
+}
+
 /* HOME */
 .home-page {
   display: flex;
@@ -302,7 +328,7 @@ p {
   font-size: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem; /* เพิ่มระยะห่างระหว่าง p และ img */
   font-weight: 500;
   margin: 0;
 }
@@ -310,6 +336,7 @@ p {
 .info-item img {
   width: 24px;
   height: 24px;
+  margin-right: 1rem; /* เพิ่มระยะห่างระหว่าง img และ p */
 }
 
 .info-item span {
@@ -399,8 +426,53 @@ p {
   width: 24px;
   margin-right: 8px;
 }
-/* PROJECT */
 
+/* Media Queries สำหรับมือถือ */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 4rem 1rem;
+  }
+
+  .about-page h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-page h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    max-width: 100%;
+  }
+
+  .personal-info {
+    grid-template-columns: 1fr; /* ใช้คอลัมน์เดียวสำหรับมือถือ */
+    padding: 1rem;
+  }
+
+  .tab-titles {
+    flex-direction: column;
+  }
+
+  .tab-links {
+    font-size: 1.1rem;
+  }
+
+  .skills-container div {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .skills-container img {
+    width: 20px;
+  }
+}
+
+/* PROJECT */
 section .projects {
   min-height: 100vh;
   padding: 2rem 9% 5rem;
@@ -533,17 +605,71 @@ p {
   border: 0.5px solid #616161;
 }
 
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
+/* Mobile Styles */
+@media (max-width: 1200px) {
+  .project,
+  .project-vertical {
+    width: 90%;
   }
 
-  .project-image img {
+  .project-description {
+    max-width: 100%;
+  }
+
+  .project-image-horizontal img,
+  .project-image-vertical img {
     width: 100%;
-    margin-top: 20px;
+    height: auto;
   }
 }
 
+@media (max-width: 768px) {
+  .project,
+  .project-vertical {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .project-description {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project-image-horizontal img,
+  .project-image-vertical img {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects h2 {
+    font-size: 2.5rem;
+  }
+
+  .projects h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    padding: 15px;
+  }
+
+  .project-links {
+    gap: 10px;
+  }
+}
 /* CERTIFICATE */
 section.certificate {
   min-height: 100vh;
@@ -603,6 +729,53 @@ section.certificate {
   font-size: 1rem;
   color: #333;
   font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificates-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .certificates-container > div {
+    padding: 0.8rem;
+  }
+
+  .certificate h3 {
+    font-size: 1.5rem;
+  }
+
+  .certificates-container .project-title {
+    font-size: 1.1rem;
+  }
+
+  .certificates-container .date {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section.certificate {
+    padding: 1.5rem 3%;
+  }
+
+  .certificates-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .certificate h3 {
+    font-size: 1.2rem;
+  }
+
+  .certificates-container .project-title {
+    font-size: 1rem;
+  }
+
+  .certificates-container .date {
+    font-size: 0.8rem;
+  }
 }
 
 /* CONTACT */

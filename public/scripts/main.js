@@ -80,3 +80,8 @@ function openTab(tabName) {
   document.getElementById(tabName).classList.add("active-tab");
   event.target.classList.add("active-link");
 }
+
+function toggleMenu() {
+  const nav = document.querySelector(".Navbar nav ul");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
