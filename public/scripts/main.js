@@ -82,6 +82,6 @@ function openTab(tabName) {
 }
 
 function toggleMenu() {
-  const nav = document.querySelector(".Navbar nav ul");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  const nav = document.querySelector(".nav-links");
+  nav.classList.toggle("show");
 }
